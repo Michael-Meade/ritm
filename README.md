@@ -43,13 +43,40 @@ requests and responses as she pleases.
   
   Ritm.shutdown
   ```
-  
+## Plugins
+  Whats new?
+  The plugin class makes it easy to manipulate, view, reverse engineer web traffic. 
+  The class currently includes:
+  [x] Inject Js
+  [x] Saving post requests
+  [x] Removes Firefox stupid requests. Also any unwanted domains
+  [x] Replace strings in the sites body.
+  [x] Change requests params
+  [x] Save the requests output
+  [x] Show/log only certain domains
+  [x] 
+  ```ruby
+  require 'ritm'
+  require 'ritm'
+  require_relative 'lib/plugin'
+  Ritm.configure do
+    ssl_reverse_proxy.ca[:pem] = 'insecure_ca.crt'
+    ssl_reverse_proxy.ca[:key] = 'insecure_ca.key'
+  end
+  Plugins.show_domain
+
+  Ritm.start
+  puts 'Hit enter to finish'
+  gets
+
+  Ritm.shutdown
+  ```
 
  **Configure your browser**
 
   Or whatever HTTP client you want to intercept traffic from, to connect
   to the proxy in `localhost:8080`
-4. **Browse the web!**
+  **Browse the web!**
 
   For the examples above, search anything in google and also visit your
   favorite newspaper website.
