@@ -1,4 +1,4 @@
-
+NOTE: this is forked from https://github.com/argos83/ritm
 # Ruby In The Middle (HTTP/HTTPS interception proxy)
 
 <img src="docs/ritm.png" width="500">
