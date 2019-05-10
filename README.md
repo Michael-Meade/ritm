@@ -47,24 +47,22 @@ requests and responses as she pleases.
   Whats new?
   The plugin class makes it easy to manipulate, view, reverse engineer web traffic. 
   The class currently includes:
-  [x] Inject Js
-  [x] Saving post requests
-  [x] Removes Firefox stupid requests. Also any unwanted domains
-  [x] Replace strings in the sites body.
-  [x] Change requests params
-  [x] Save the requests output
-  [x] Show/log only certain domains
-  [x] 
+  - [x] Inject Js
+  - [x] Saving post requests
+  - [x] Removes Firefox stupid requests. Also any unwanted domains
+  - [x] Replace strings in the sites body.
+  - [x] Change requests params
+  - [x] Save the requests output
+  - [x] Show/log only certain domains
   ```ruby
-  require 'ritm'
   require 'ritm'
   require_relative 'lib/plugin'
   Ritm.configure do
     ssl_reverse_proxy.ca[:pem] = 'insecure_ca.crt'
     ssl_reverse_proxy.ca[:key] = 'insecure_ca.key'
   end
-  Plugins.show_domain
-
+  Plugins.inject_js(file="alert.js")
+  
   Ritm.start
   puts 'Hit enter to finish'
   gets
